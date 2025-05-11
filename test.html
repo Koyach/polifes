@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>〜政治って意外とオモシロイ！？〜ポリティカルフェスタ（ぽりふぇす）</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Noto+Sans+JP:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+
+        .font-mochiy {
+            font-family: 'Mochiy Pop One', sans-serif;
+        }
+
+        /* スムーズスクロール */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* カスタムグラデーション */
+        .bg-gradient-polyfes {
+            background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+        }
+
+        .bg-gradient-polyfes-alt {
+            background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+        }
+
+        .section-title {
+            @apply text-3xl md:text-4xl font-mochiy text-center mb-8 md:mb-12 text-gray-700;
+        }
+
+        .card {
+            @apply bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300;
+        }
+
+        .nav-link {
+            @apply px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-sky-100 hover:text-sky-700 transition-colors;
+        }
+
+        .btn-primary {
+            @apply inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-transform duration-300;
+        }
+
+        .btn-secondary {
+            @apply inline-block bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-transform duration-300;
+        }
+
+        /* ハンバーガーメニュー用 */
+        #menu-toggle:checked+#menu {
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-mochiy text-orange-500">ぽりふぇす！</a>
+                </div>
+                <div class="hidden md:block">
+                    <nav class="ml-10 flex items-baseline space-x-4">
+                        <a href="#about" class="nav-link">ポリフェスとは？</a>
+                        <a href="#program" class="nav-link">プログラム</a>
+                        <a href="#team" class="nav-link">実行委員会</a>
+                        <a href="#support" class="nav-link">応援する！</a>
+                        <a href="#access" class="nav-link">アクセス</a>
+                        <a href="#contact" class="nav-link">お問合せ</a>
+                    </nav>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn"
+                        class="text-gray-700 hover:text-orange-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg py-2">
+            <a href="#about"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-sky-100 hover:text-sky-700">ポリフェスとは？</a>
+            <a href="#program"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-sky-100 hover:text-sky-700">プログラム</a>
+            <a href="#team" class="block px-4 py-2 text-sm text-gray-700 hover:bg-sky-100 hover:text-sky-700">実行委員会</a>
+            <a href="#support"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-sky-100 hover:text-sky-700">応援する！</a>
+            <a href="#access" class="block px-4 py-2 text-sm text-gray-700 hover:bg-sky-100 hover:text-sky-700">アクセス</a>
+            <a href="#contact"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-sky-100 hover:text-sky-700">お問合せ</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-gradient-polyfes text-white py-20 md:py-32">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-mochiy mb-6 drop-shadow-lg">
+                    〜政治って意外とオモシロイ！？〜<br class="md:hidden">ポリティカルフェスタ（ぽりふぇす）
+                </h1>
+                <p class="text-xl md:text-2xl font-bold mb-10 drop-shadow-md">
+                    縁日で、未来を選ぼう！親子で楽しむ「ぽりふぇす」開催！
+                </p>
+                <div class="mb-8">
+                    <p class="text-lg font-semibold">2025年7月13日(日) 11:00〜16:00 (予定)</p>
+                    <p class="text-lg font-semibold">プララ杉田 1F パティオ広場 (入場無料！)</p>
+                </div>
+                <a href="#support" class="btn-primary text-lg">ポリフェスを応援する！</a>
+                <img src="https://placehold.co/1200x400/84fab0/ffffff?text=%E3%83%9D%E3%83%AA%E3%83%95%E3%82%A7%E3%82%B9%EF%BC%81%E3%82%AD%E3%83%BC%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB"
+                    alt="ポリフェス キービジュアル" class="mt-12 mx-auto rounded-lg shadow-2xl max-w-full h-auto">
+            </div>
+        </section>
+
+        <section id="about" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">ポリフェスとは？</h2>
+                <div class="max-w-3xl mx-auto text-lg text-gray-700 space-y-6 leading-relaxed">
+                    <p>「政治って、なんか難しそう…」「自分には関係ないかな…」</p>
+                    <p>そんなふうに感じている、かつての私たちのような人たちへ。私たちは、横浜・杉田の地で、<strong
+                            class="text-orange-500">「政治は、もっと身近で、もっと面白い！」</strong>を体験できる、これまでになかった『お祭り』＝<strong
+                            class="text-orange-500 font-mochiy">「ポリティカルフェスタ（ぽりふぇす）」</strong>を、2025年7月13日(日)に開催します！</p>
+                    <p>学生団体ミラコエ、学生団体ivote、学生団体ぽりーず、そしてNPO法人Mielka。所属は違えど、<strong
+                            class="text-sky-600">「主権者教育を通して、日本の未来をより良くしたい！」</strong>という熱い想いを持った仲間たちが集結しました。</p>
+                    <p>縁日のようなワクワク感の中で、親子で、友達同士で、楽しみながら社会や未来について考え、気軽に話せる一日を創り上げます。この新しい挑戦に、あなたの力を貸してくださいませんか？</p>
+                    <p class="font-bold text-xl text-center mt-8">
+                        7月20日(日)は参議院議員選挙の投票日（予定）。<br>だからこそ、その1週間前に、楽しく学んで未来を考えよう！</p>
+                </div>
+                <img src="https://placehold.co/800x400/f0f9ff/38bdf8?text=%E6%A5%BD%E3%81%97%E3%81%84%E5%AD%A6%E3%81%B3%E3%81%AE%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8"
+                    alt="楽しい学びのイメージ" class="mt-12 mx-auto rounded-lg shadow-xl max-w-2xl h-auto">
+
+            </div>
+        </section>
+
+        <section id="program" class="py-16 md:py-24 bg-slate-100">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">何ができるの？ 当日のプログラム！</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                    <div class="card">
+                        <img src="https://placehold.co/600x400/ffedd5/fb923c?text=%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B8%E4%BC%81%E7%94%BB%EF%BC%81"
+                            alt="ステージ企画" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-mochiy text-orange-500 mb-3">ステージ企画</h3>
+                            <p class="text-gray-600 mb-4">見て、聞いて、盛り上がろう！地元学生のパフォーマンスや、社会活動コンテスト、参加型大喜利も！？</p>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li>オープニング＆エンディング</li>
+                                <li>地元学生パフォーマンスタイム！【出演者交渉中】</li>
+                                <li>社会活動コンテスト or アイデアバトル！</li>
+                                <li>もしも私が〇〇だったら！？なりきり大喜利選手権</li>
+                                <li>協賛企業様PRタイム</li>
+                                <li>【行政関係者パネルディスカッション検討中】</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://placehold.co/600x400/ecfccb/84cc16?text=%E4%BD%93%E9%A8%93%E3%83%96%E3%83%BC%E3%82%B9%EF%BC%81"
+                            alt="体験ブース" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-mochiy text-green-500 mb-3">体験ブース</h3>
+                            <p class="text-gray-600 mb-4">各団体が趣向を凝らしたブースで、楽しみながら社会や政治に触れよう！</p>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li>政策トランプ神経衰弱 (by ミラコエ)</li>
+                                <li>【ivote企画内容 追記】</li>
+                                <li>【ぽりーず企画内容 追記】</li>
+                                <li>あなたの推し政策/政党は？シール投票 (by Mielka)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://placehold.co/600x400/dbeafe/3b82f6?text=%E6%A5%BD%E3%81%97%E3%81%84%E7%B8%81%E6%97%A5%EF%BC%81"
+                            alt="楽しい縁日" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-mochiy text-blue-500 mb-3">楽しい縁日</h3>
+                            <p class="text-gray-600 mb-4">お祭りといえばコレ！遊んで学べる、ポリフェスならではの縁日！</p>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li>政策射的 / 輪投げ</li>
+                                <li>選挙クイズラリー</li>
+                                <li>スーパーボールすくい＆ヨーヨー釣り</li>
+                                <li>もし私が総理大臣になったら？パネルボード</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card md:col-span-2 lg:col-span-1">
+                        <img src="https://placehold.co/600x400/fce7f3/ec4899?text=%E7%BE%8E%E5%91%B3%E3%81%97%E3%81%84%E3%82%82%E3%81%AE%E3%82%82%EF%BC%81"
+                            alt="飲食・物販" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-mochiy text-pink-500 mb-3">飲食・物販</h3>
+                            <p class="text-gray-600 mb-4">お腹が空いても大丈夫！話題のフードやオリジナルグッズも？</p>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li>SDGsフード / 未来食ブース【出店交渉中】</li>
+                                <li>地元飲食店キッチンカー【出店交渉中】</li>
+                                <li>ポリフェスオリジナルグッズ販売【検討中】</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:col-span-2 lg:col-span-2 card bg-gradient-polyfes-alt p-6 md:p-8 text-center">
+                        <h3 class="text-2xl md:text-3xl font-mochiy text-rose-700 mb-4">会場マップ＆タイムテーブル</h3>
+                        <p class="text-gray-700 mb-6">当日の詳しいプログラムやブースの配置は、開催が近づいてきたらこちらで公開します！お楽しみに！</p>
+                        <img src="https://placehold.co/800x300/fcb69f/ffffff?text=%E4% 会%A0%B4%E3%83%9E%E3%83%83%E3%83%97%EF%BC%86%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB+%E6%BA%96%E5%82%99%E4%B8%AD%EF%BC%81"
+                            alt="会場マップ・タイムテーブル準備中" class="mx-auto rounded-lg shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">実行委員会メンバー</h2>
+                <div class="max-w-4xl mx-auto text-center mb-12">
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        「主権者教育を通して日本の社会を、未来を良くしたい！」そんな熱い想いを持った学生とNPOの仲間たちが、この「ぽりふぇす」を創り上げています！</p>
+                </div>
+                <img src="https://placehold.co/1000x400/e0f2fe/0ea5e9?text=%E5%AE%9F%E8%A1%8C%E5%A7%94%E5%93%A1%E4%BC%9A%E3%83%A1%E3%83%B3%E3%83%90%E3%83%BC%EF%BC%81"
+                    alt="実行委員会メンバー" class="mb-12 mx-auto rounded-lg shadow-xl max-w-3xl h-auto">
+
+                <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
+                    <div class="card p-6">
+                        <h3 class="text-xl font-bold text-orange-500 mb-2">主催：学生団体ミラコエ</h3>
+                        <img src="https://placehold.co/150x150/fed7aa/f97316?text=%E3%83%9F%E3%83%A9%E3%82%B3%E3%82%A8"
+                            alt="ミラコエ ロゴ" class="w-24 h-24 mx-auto mb-4 rounded-full shadow-md">
+                        <p class="text-gray-600 text-sm mb-3">
+                            「全ての人が未来に希望を持ち、その実現に向けて挑戦できる社会」を目指し、主権者教育を中心に、中高生向けのキャリア支援、イベント企画・運営など、多岐にわたる活動を展開しています。</p>
+                        <p class="font-semibold text-gray-700">代表：谷 昊埜（たに こうや）</p>
+                        <p class="text-sm text-gray-500 italic">「1団体では届けきれない想いを、このポリフェスで形にしたい！皆さんと一緒に社会にインパクトを与えたいです！」
+                        </p>
+                    </div>
+                    <div class="space-y-8">
+                        <div class="card p-6">
+                            <h3 class="text-xl font-bold text-sky-600 mb-2">共催：学生団体ivote</h3>
+                            <img src="https://placehold.co/120x120/bae6fd/0284c7?text=ivote" alt="ivote ロゴ"
+                                class="w-20 h-20 mx-auto mb-3 rounded-full shadow-sm">
+                            <p class="text-gray-600 text-sm mb-3">【ivoteの活動紹介と、本イベントへの意気込みコメントを追記】</p>
+                        </div>
+                        <div class="card p-6">
+                            <h3 class="text-xl font-bold text-lime-600 mb-2">共催：学生団体ぽりーず</h3>
+                            <img src="https://placehold.co/120x120/d9f99d/4d7c0f?text=ぽりーず" alt="ぽりーず ロゴ"
+                                class="w-20 h-20 mx-auto mb-3 rounded-full shadow-sm">
+                            <p class="text-gray-600 text-sm mb-3">【ぽりーずの活動紹介と、本イベントへの意気込みコメントを追記】</p>
+                        </div>
+                        <div class="card p-6">
+                            <h3 class="text-xl font-bold text-indigo-600 mb-2">共催：NPO法人Mielka</h3>
+                            <img src="https://placehold.co/120x120/c7d2fe/4338ca?text=Mielka" alt="Mielka ロゴ"
+                                class="w-20 h-20 mx-auto mb-3 rounded-full shadow-sm">
+                            <p class="text-gray-600 text-sm mb-3">【Mielkaの活動紹介と、本イベントへの意気込みコメントを追記（オンライン中心参加である旨も）】</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="support" class="py-16 md:py-24 bg-gradient-polyfes">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+                <h2 class="text-3xl md:text-4xl font-mochiy mb-8 md:mb-12 drop-shadow-lg">ポリフェスを応援してください！</h2>
+                <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
+                    この新しい挑戦である「ぽりふぇす」を成功させ、多くの若者や親子連れに政治や社会への関心を持つきっかけを提供するためには、皆様からのご支援が不可欠です。私たちの想いにご賛同いただき、未来への投資として、本イベントへのご支援を賜りますよう、心よりお願い申し上げます。
+                </p>
+                <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+                    <div class="bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-2xl text-gray-700">
+                        <h3 class="text-2xl font-mochiy text-orange-500 mb-4">クラウドファンディングで応援！</h3>
+                        <p class="mb-6">イベント開催費用の一部を募るため、Campfireにてクラウドファンディングを実施中です！目標金額は10万円。リターンもご用意しています！</p>
+                        <img src="https://placehold.co/200x80/f97316/ffffff?text=CAMPFIRE" alt="Campfire ロゴ"
+                            class="mx-auto mb-6">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-primary">プロジェクトページを見る</a>
+                        <p class="text-sm mt-4">期間：2025年5月19日(月) 〜 7月13日(日)</p>
+                    </div>
+                    <div class="bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-2xl text-gray-700">
+                        <h3 class="text-2xl font-mochiy text-sky-600 mb-4">企業・団体として協賛する！</h3>
+                        <p class="mb-6">Z世代・ファミリー層へのPR、CSR活動、地域貢献に関心のある企業・団体様からのご協賛を心よりお待ちしております。多様な協賛プランをご用意しています。</p>
+                        <img src="https://placehold.co/200x80/0284c7/ffffff?text=%E5%8D%94%E8%B3%9B%E5%8B%9F%E9%9B%86"
+                            alt="協賛募集" class="mx-auto mb-6">
+                        <a href="#contact" class="btn-secondary">協賛について問い合わせる</a>
+                        <p class="text-sm mt-4">（ゴールド:5万円～、詳細は下記お問合せ先まで）</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="access" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">会場アクセス</h2>
+                <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-700 mb-3">プララ杉田 1F パティオ広場</h3>
+                        <p class="text-gray-600 mb-4">神奈川県横浜市磯子区杉田1-1-1</p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li><strong class="text-orange-500">京急本線「杉田駅」</strong>直結！雨にも濡れません！</li>
+                            <li><strong class="text-sky-600">JR根岸線「新杉田駅」</strong>より徒歩約5分（ペデストリアンデッキで繋がっています）</li>
+                            <li><strong class="text-green-500">横浜シーサイドライン「新杉田駅」</strong>より徒歩約5分</li>
+                        </ul>
+                        <p class="mt-6 text-sm text-gray-500">※駐車場・駐輪場の詳細については、プララ杉田の公式情報をご確認ください。</p>
+                    </div>
+                    <div>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3252.876237393729!2d139.61382157594412!3d35.3835254462701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60184366ec0d94d7%3A0xc2a174c29862d5cd!2z44OX44Op44Op5p2J55Sw5bCC6ZaA5bqX5Lya!5e0!3m2!1sja!2sus!4v1746997627188!5m2!1sja!2sus"
+                            width="100%" height="350"
+                            style="border:0; border-radius: 0.5rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 md:py-24 bg-slate-100">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">お気軽にお問い合わせください</h2>
+                <div class="max-w-xl mx-auto bg-white p-8 md:p-10 rounded-xl shadow-xl">
+                    <p class="text-gray-700 mb-6 text-center">イベントに関するご質問、取材のお申し込み、協賛に関するご相談など、お気軽にご連絡ください。</p>
+                    <form action="https://formspree.io/f/xldbwpgd" method="POST">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-bold mb-2">お名前<span
+                                    class="text-red-500">*</span></label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-bold mb-2">メールアドレス<span
+                                    class="text-red-500">*</span></label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="_subject" class="block text-gray-700 font-bold mb-2">件名</label>
+                            <input type="text" id="_subject" name="_subject"
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-bold mb-2">お問い合わせ内容<span
+                                    class="text-red-500">*</span></label>
+                            <textarea id="message" name="message" rows="5" required
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn-primary">送信する</button>
+                        </div>
+                    </form>
+                    <p class="text-center mt-8 text-sm text-gray-600">
+                        または、直接メールでお問い合わせください。<br>
+                        ポリティカルフェスタ実行委員会 担当：谷 昊埜（たに こうや）<br>
+                        <a href="mailto:inbox.ktani@gmail.com"
+                            class="text-orange-500 hover:underline">inbox.ktani@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-4">
+                <a href="#"
+                    class="text-3xl font-mochiy text-orange-400 hover:text-orange-300 transition-colors">ぽりふぇす！</a>
+            </div>
+            <nav class="mb-6 flex flex-wrap justify-center gap-x-6 gap-y-2">
+                <a href="#about" class="hover:text-orange-300">ポリフェスとは？</a>
+                <a href="#program" class="hover:text-orange-300">プログラム</a>
+                <a href="#team" class="hover:text-orange-300">実行委員会</a>
+                <a href="#support" class="hover:text-orange-300">応援する！</a>
+                <a href="#access" class="hover:text-orange-300">アクセス</a>
+                <a href="#contact" class="hover:text-orange-300">お問合せ</a>
+            </nav>
+            <div class="mb-6 flex justify-center space-x-6">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="hover:text-orange-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
+                        </path>
+                    </svg>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="hover:text-orange-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.624.522c.636-.247 1.363-.416 2.427-.465C10.072 2.013 10.426 2 12.315 2zm0 1.624c-2.375 0-2.707.01-3.658.056a3.27 3.27 0 00-1.17.226c-.47.163-.86.386-1.228.754a3.27 3.27 0 00-.754 1.228c-.163.47-.226 1.17-.226 1.658C6.325 9.582 6.315 9.915 6.315 12.315s.01 2.733.056 3.658a3.27 3.27 0 00.226 1.17c.163.47.386.86.754 1.228a3.27 3.27 0 001.228.754c.47.163 1.17.226 1.658.226.95.046 1.283.056 3.658.056s2.707-.01 3.658-.056a3.27 3.27 0 001.17-.226c.47-.163.86-.386 1.228-.754a3.27 3.27 0 00.754-1.228c.163-.47.226-1.17.226-1.658.046-.95.056-1.283.056-3.658s-.01-2.733-.056-3.658a3.27 3.27 0 00-.226-1.17c-.163-.47-.386-.86-.754-1.228a3.27 3.27 0 00-1.228-.754c-.47-.163-1.17-.226-1.658-.226C15.022 3.634 14.69 3.624 12.315 3.624zM12 8.118a3.882 3.882 0 100 7.764 3.882 3.882 0 000-7.764zm0 6.138a2.256 2.256 0 110-4.512 2.256 2.256 0 010 4.512zM16.802 6.118a1.228 1.228 0 100 2.456 1.228 1.228 0 000-2.456z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+            <p class="text-sm text-gray-400">&copy; 2025 ポリティカルフェスタ実行委員会 (主催: 学生団体ミラコエ). All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // モバイルメニューのトグル
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // スムーズスクロール（ナビゲーションリンク用）
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                // モバイルメニューが開いていたら閉じる
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
